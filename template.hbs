@@ -1,0 +1,22 @@
+<form>
+
+{{#each pcs}} 
+<div class="form-group">
+<input type="checkbox" data-dtype="Boolean" name="id.{{this.id}}" {{checked (lookup ../marks.id this.id)}}/>
+<label>
+{{this.name}}
+</label>
+</div>
+{{/each}}
+<div class="form-group">
+<button type="submit">
+    <i class="fas fa-save"></i>
+    Save
+</button>
+<button type="close">
+    <i class="fas fa-times"></i>
+    Cancel
+</button>
+</div>
+
+</form>

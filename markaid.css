@@ -1,0 +1,16 @@
+.ez-mark-aid-mark {
+    font-size: 90%;
+    background: rgba(0, 0, 0, 0.1);
+    line-height: 24px;
+    border-radius: 3px;
+    margin: 2px 0;
+    padding: 0 0.25em;
+    border: 1px solid var(--color-border-light-2);
+    box-shadow: 0 0 2px #FFF inset;
+}
+.ez-mark-aid-mark i {
+    opacity: 0.5;
+}
+.ez-mark-aid-mark + .ez-mark-aid-mark {
+    margin-top: 0;
+}
