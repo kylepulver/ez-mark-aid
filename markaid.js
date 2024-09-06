@@ -12,9 +12,11 @@ Hooks.on("renderChatMessage",  async (message, html, data) => {
     if (!marks) return;
 
     Object.keys(marks.id).forEach(id => {
-        const actor = game.actors.get(id)
-        if (!!actor) {
-            html.find(".message-content").append(`<div class="ez-mark-aid-mark"><i class="fas fa-plus-circle"></i> Aiding <strong>${actor.name}</strong></div>`)
+        if (marks.id[id]) {
+            const actor = game.actors.get(id)
+            if (!!actor) {
+                html.find(".message-content").append(`<div class="ez-mark-aid-mark"><i class="fas fa-plus-circle"></i> Aiding <strong>${actor.name}</strong></div>`)
+            }
         }
     })
 })
