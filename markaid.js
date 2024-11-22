@@ -27,7 +27,7 @@ Hooks.on("getChatLogEntryContext", (application, options) => {
         icon: `<i class="fas fa-circle"></i>`,
         condition: li => {
             const message = getMessage(li);
-            return message.isOwner;
+            return message.isAuthor || game.user.isGM;
         },
         callback: li => {
             const message = getMessage(li);
