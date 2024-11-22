@@ -27,7 +27,7 @@ Hooks.on("getChatLogEntryContext", (application, options) => {
         icon: `<i class="fas fa-circle"></i>`,
         condition: li => {
             const message = getMessage(li);
-            return message.permission == CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER;
+            return message.isOwner;
         },
         callback: li => {
             const message = getMessage(li);
